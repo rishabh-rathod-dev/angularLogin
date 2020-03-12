@@ -1,5 +1,5 @@
 <div class="login-conponent">
-    <form [formGroup]="form">
+    <form (ngSubmit)="signupFunction()" [formGroup]="form">
         <div class="form-group">
             <label for="email">Email *</label>
             <input type="email" name="email" id="email" placeholder="Please Enter Email" formControlName="email" required>
