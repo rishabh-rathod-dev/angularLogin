@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-// import { AngularFontAwesomeModule } from 'angular-font-awesome'
 import 'zone.js';
 
 
@@ -21,7 +20,6 @@ import { SignupComponent } from './signup/signup.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule
-    // AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

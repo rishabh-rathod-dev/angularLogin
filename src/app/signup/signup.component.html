@@ -1,4 +1,6 @@
 <div class="login-conponent">
+    <h2>SignUp Page</h2>
+    <br>
     <form (ngSubmit)="signupFunction()" [formGroup]="form">
         <div class="form-group">
             <label for="email">Email *</label>
@@ -12,7 +14,9 @@
         <div class="form-group">
             <button type="submit" [disabled]="!form.valid">Submit</button>
         </div>
-
+        <div class="loginBtn">
+            <a href="/login">Login</a>
+        </div>
        <div class="validation">
 
         <span>

@@ -1,4 +1,6 @@
 <div class="login-conponent">
+    <h2>Login Page</h2>
+    <br>
     <form [formGroup]="form">
         <div class="form-group">
             <label for="email">Email *</label>
@@ -10,9 +12,11 @@
             <input type="password" name="password" id="password" (keydown.space)="$event.preventDefault();" placeholder="Please Enter Password" formControlName="password">
         </div>
         <div class="form-group">
-            <button type="submit" [disabled]="!form.valid">Submit</button>
+            <button type="submit" (click)="authenticate()">Submit</button>
         </div>
-
+        <div class="signUpBtn">
+            <a href="/signup">Sign Up here</a>
+        </div>
        <div class="validation">
 
         <span>
