@@ -3,13 +3,46 @@
     <br>
     <form (ngSubmit)="signupFunction()" [formGroup]="form">
         <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" name="email" id="email" placeholder="Please Enter Email" formControlName="email" required>
+            <label for="f_name">First Name *</label>
+            <input type="text" name="f_name" id="f_name" placeholder="Please Enter First Name" formControlName="f_name">
             
         </div>
         <div class="form-group">
+            <label for="l_email">Last Name *</label>
+            <input type="text" name="l_name" id="l_name" placeholder="Please Enter Last Name" formControlName="l_name" >
+            
+        </div>
+        <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" name="email" id="email" placeholder="Please Enter Email" formControlName="email" >
+            <br>
+            <span>
+                <i class="fa fa-check-circle" style="color:green" *ngIf="form.controls.email.valid"></i>&nbsp;
+                <i class="fa fa-times-circle" style="color:red" *ngIf="form.controls.email.invalid"></i>
+                Please enter valid email address.
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Age *</label>
+            <input type="date" name="dob" id="dob" placeholder="Please Enter DOB" formControlName="dob" >
+            <br>
+            <!-- <span>
+                <i class="fa fa-check-circle" style="color:green" *ngIf="form.controls.dob.valid"></i>&nbsp;
+                <i class="fa fa-times-circle" style="color:red" *ngIf="form.controls.dob.invalid"></i>
+                Should be more than 18 and should be less than 50.
+            </span> -->
+        </div>
+      
+        <div class="form-group">
             <label for="password">Password *</label>
             <input type="password" name="password" id="password" (keydown.space)="$event.preventDefault();" placeholder="Please Enter Password" formControlName="password">
+            <br>
+            <span>
+                <i class="fa fa-check-circle" style="color:green" *ngIf="form.controls.password.valid"></i>&nbsp;
+                <i class="fa fa-times-circle" style="color:red" *ngIf="form.controls.password.invalid"></i>
+                Password  includes, Minimum 4 Characters, Number, Alphabet, Symbol and Space not allowed.
+            </span>
         </div>
         <div class="form-group">
             <button type="submit" [disabled]="!form.valid">Submit</button>
@@ -19,16 +52,8 @@
         </div>
        <div class="validation">
 
-        <span>
-            <i class="fa fa-check-circle" style="color:green" *ngIf="form.controls.email.valid"></i>&nbsp;
-            <i class="fa fa-times-circle" style="color:red" *ngIf="form.controls.email.invalid"></i>
-            Please enter valid email address.
-        </span><br>
-        <span>
-            <i class="fa fa-check-circle" style="color:green" *ngIf="form.controls.password.valid"></i>&nbsp;
-            <i class="fa fa-times-circle" style="color:red" *ngIf="form.controls.password.invalid"></i>
-            Password should contain one special character, one capital character and one number.
-        </span>
+     
+        
        </div>
     </form>
 </div>

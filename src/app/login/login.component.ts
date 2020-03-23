@@ -17,19 +17,24 @@ export class LoginComponent implements OnInit {
 
    authenticate() {
     let email = this.form.controls.email.value;
-    console.log(email,"new email")
-    console.log(userEmail,"user email is here")
-    if(email === userEmail){
-      console.log(userEmail,'you are logged in')
-    }else{
-      console.log(userEmail,"Not Logged in")
+    let password = this.form.controls.password.value;
+    let userExisting = JSON.parse(userEmail);
+    for (let i = 0; i <= userExisting.length; i++){     
+      if(userExisting[i][0] === email  && userExisting[i][1] === password){        
+        console.log(userExisting[i][0], userExisting[i][0],"You are logged in")
+        window.location.href="/main";
+        return false;
+      }
+      else{
+        console.log("You are not logged in")        
+      }
     }
+   
+
+   
   }
+
   ngOnInit(): void {
-    console.log(userEmail,"userEmail")
-    if(userEmail!=null && userEmail!=undefined && userEmail!=''){
-      this.authenticate();
-    }
   }
 
   

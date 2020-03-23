@@ -12,21 +12,19 @@ export class SignupComponent implements OnInit {
   form: FormGroup;
   constructor(fb: FormBuilder) {
     this.form = fb.group({
+      f_name:['', [Validators.required, Validators.minLength(4)]],
+      l_name:['', [Validators.required, Validators.minLength(4)]],
+      // dob:['',dobVlidator],
+      dob:[''],
       email:['', [Validators.required, Validators.email,Validators.pattern('^[A-Za-z0-9._]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
       password:['', passwordValidator]
   });
  }
 
  signupFunction(){
+   console.log(this.form.controls,"controls are here")
    let user = [this.form.controls.email.value,this.form.controls.password.value]
-   // user.push(...userEmail,...userPass)
-   console.log(user,"users data")
    users.push(user)
-   console.log(users,"users data")
-   // localStorage.setItem('users', JSON.stringify(users));
-   localStorage.setItem('userEmail',JSON.stringify(users))
-   // console.log(JSON.stringify(users),"password");
-   console.log(localStorage.getItem('userEmail'),"userEmail array")
    }
   ngOnInit(): void {
     
