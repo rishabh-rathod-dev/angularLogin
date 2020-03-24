@@ -12,6 +12,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { NG7SwiperCarouselComponent } from './ng7-swiper-carousel/ng7-swiper-carousel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     SideBarComponent,
     MainComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NG7SwiperCarouselComponent
   ],
   imports: [
     BrowserModule,

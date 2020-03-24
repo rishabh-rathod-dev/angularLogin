@@ -1,0 +1,16 @@
+.login-conponent{
+    width: 25%;
+    margin: 1% 40%;
+    background-color: #f8f9fa;
+    padding: 1% 2%;
+    box-shadow: grey 2px 2px 2px 2px;
+
+}
+input[type=email], input[type=password], input[type=text], input[type=number],input[type=date], input[type=password]{
+    width: 100%;
+    padding: 3px;
+}
+span{
+    font-size: 12px;
+    line-height: 0;
+}

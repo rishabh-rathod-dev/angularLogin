@@ -1,8 +1,88 @@
-<nav class="navbar">
-    <!-- logo -->
-    <div class="navbar-brand">
-      <a class="navbar-item">
-        <img src="https://bulma.io/images/bulma-logo.png">
-      </a>
-    </div>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand navbar-toggle"><span class="navbar-toggler-icon"></span></a>
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item logo active">
+        <a class="nav-link" routerLink="/main"><img src="https://pngimg.com/uploads/amazon/amazon_PNG9.png" class="logoImg" alt=""> <span class="sr-only">(current)</span></a>
+      </li>
+
+
+      <form action="/action_page.php" class="form-inline my-2 my-lg-0 searchForm">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle borderNone blaclClr" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           All
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+        <input class="borderNone searchInput" type="text" placeholder="Search.." name="search">
+        <button class="borderNone bgGold" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          EN
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="">Action</a>
+          <a class="dropdown-item" routerLink="">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="">Something else here</a>
+        </div>
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="">Action</a>
+          <a class="dropdown-item" routerLink="">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="">Something else here</a>
+        </div>
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Orders
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="">Action</a>
+          <a class="dropdown-item" routerLink="">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="">Something else here</a>
+        </div>
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Prime
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="">Action</a>
+          <a class="dropdown-item" routerLink="">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="">Something else here</a>
+        </div>
+      </li>
+
+
+      <li class="nav-item logo">
+        <a class="nav-link" routerLink="/cart"><img class="cart" src="https://pngimage.net/wp-content/uploads/2018/06/orange-shopping-cart-icon-png-5.png" alt=""></a>
+      </li>
+      
+    </ul>
+    
+  </div>
+</nav>

@@ -1,6 +1,6 @@
 <div class="login-conponent">
-    <h2>Login Page</h2>
-    <br>
+    <h2 class="text-center">Login Page</h2>
+    <hr>
     <form [formGroup]="form">
         <div class="form-group">
             <label for="email">Email *</label>
@@ -14,9 +14,10 @@
         <div class="form-group">
             <button type="submit" (click)="authenticate()">Submit</button>
         </div>
-        <div class="signUpBtn">
-            <a href="/signup">Sign Up here</a>
+        <div class="signUpBtn float-right">
+           <em>Click here for  <a href="/signup">Sign Up</a></em>
         </div>
+        <br>
        <div class="validation">
 
         <!-- <span>

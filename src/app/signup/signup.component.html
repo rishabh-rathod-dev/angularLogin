@@ -1,16 +1,26 @@
 <div class="login-conponent">
-    <h2>SignUp Page</h2>
-    <br>
+    <h2 class="text-center">SignUp Page</h2>
+    <hr>
     <form (ngSubmit)="signupFunction()" [formGroup]="form">
         <div class="form-group">
             <label for="f_name">First Name *</label>
             <input type="text" name="f_name" id="f_name" placeholder="Please Enter First Name" formControlName="f_name">
-            
+            <br>
+            <span>
+                <i class="fa fa-check-circle" style="color:green" *ngIf="form.controls.f_name.valid"></i>&nbsp;
+                <i class="fa fa-times-circle" style="color:red" *ngIf="form.controls.f_name.invalid"></i>
+                First Name includes minimum 4 characters.
+            </span>
         </div>
         <div class="form-group">
             <label for="l_email">Last Name *</label>
             <input type="text" name="l_name" id="l_name" placeholder="Please Enter Last Name" formControlName="l_name" >
-            
+            <br>
+            <span>
+                <i class="fa fa-check-circle" style="color:green" *ngIf="form.controls.l_name.valid"></i>&nbsp;
+                <i class="fa fa-times-circle" style="color:red" *ngIf="form.controls.l_name.invalid"></i>
+                Last Name includes minimum 4 characters.
+            </span>
         </div>
         <div class="form-group">
             <label for="email">Email *</label>
@@ -27,11 +37,11 @@
             <label for="dob">Age *</label>
             <input type="date" name="dob" id="dob" placeholder="Please Enter DOB" formControlName="dob" >
             <br>
-            <!-- <span>
+            <span>
                 <i class="fa fa-check-circle" style="color:green" *ngIf="form.controls.dob.valid"></i>&nbsp;
                 <i class="fa fa-times-circle" style="color:red" *ngIf="form.controls.dob.invalid"></i>
                 Should be more than 18 and should be less than 50.
-            </span> -->
+            </span>
         </div>
       
         <div class="form-group">
@@ -44,12 +54,13 @@
                 Password  includes, Minimum 4 Characters, Number, Alphabet, Symbol and Space not allowed.
             </span>
         </div>
-        <div class="form-group">
+        <div class="form-group ">
             <button type="submit" [disabled]="!form.valid">Submit</button>
         </div>
-        <div class="loginBtn">
-            <a href="/login">Login</a>
+        <div class="loginBtn float-right">
+            <em>Click here for <a href="/login">Login</a></em>
         </div>
+        <br>
        <div class="validation">
 
      
