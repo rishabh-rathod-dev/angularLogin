@@ -32,3 +32,8 @@ input[type=text]{
 .searchInput{
     width:85%;
 }
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}

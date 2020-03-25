@@ -1,1 +1,8 @@
-<app-ng7-swiper-carousel></app-ng7-swiper-carousel>
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <div class="picsum-img-wrapper">
+        <img [src]="image" alt="Random slide" class="imgStyle">
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  

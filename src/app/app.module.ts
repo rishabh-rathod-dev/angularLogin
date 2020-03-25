@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import 'zone.js';
 
 
@@ -12,7 +13,9 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { NG7SwiperCarouselComponent } from './ng7-swiper-carousel/ng7-swiper-carousel.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,13 +26,14 @@ import { NG7SwiperCarouselComponent } from './ng7-swiper-carousel/ng7-swiper-car
     MainComponent,
     HeaderComponent,
     FooterComponent,
-    NG7SwiperCarouselComponent
+    ShoppingListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

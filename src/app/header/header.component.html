@@ -1,9 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand navbar-toggle"><span class="navbar-toggler-icon"></span></a>
-  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> -->
-
+  <a class="navbar-brand navbar-toggle"  (click)="isCollapsed = !isCollapsed"
+  [attr.aria-expanded]="!isCollapsed"><span class="navbar-toggler-icon"></span></a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item logo active">
@@ -12,14 +9,12 @@
 
 
       <form action="/action_page.php" class="form-inline my-2 my-lg-0 searchForm">
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle borderNone blaclClr" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           All
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+          <a class="btn btn-secondary dropdown-toggle borderNone blaclClr" ngbDropdownToggle>All</a>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <button ngbDropdownItem>One</button>
+            <button ngbDropdownItem>Two</button>
+            <button ngbDropdownItem>Four!</button>
           </div>
         </div>
         <input class="borderNone searchInput" type="text" placeholder="Search.." name="search">
@@ -86,3 +81,11 @@
     
   </div>
 </nav>
+
+<div id="collapseExample" [ngbCollapse]="isCollapsed">
+  <div class="card">
+    <div class="card-body">
+      You can collapse this card by clicking Toggle
+    </div>
+  </div>
+</div>

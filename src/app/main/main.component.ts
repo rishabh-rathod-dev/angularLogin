@@ -11,5 +11,6 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  images = ["https://social.fbbonline.in/images/home_banner.jpg", "https://www.falahsports.com/panelimages/mainbanner/banner_5.jpg"].map((n) => `${n}`);
 }
