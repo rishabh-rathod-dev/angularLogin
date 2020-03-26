@@ -37,3 +37,52 @@ input[type=text]{
     width: 100%;
     align-items: stretch;
 }
+
+  #collapseExample{
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 16;
+  }
+  .sidenav{
+     background-color: #ffffff;
+     width: 23%;
+     height: 100%;
+     overflow: auto;
+  }
+  .closeModal{
+     position: absolute;
+     left: 24%;
+     top: 0;
+     cursor: pointer;
+     color: #ffffff;
+     font-size: 26px;
+  }
+  ul{
+    list-style: none;   
+  }
+  .ulPding{
+    padding: 4% 12%;
+  }
+  .ulPding>li{
+      padding: 2% 0%;
+  }
+  .ulPding>li>a{
+    color: #111;
+  }
+
+  .ulPding:first-child {
+    font-weight: 300;
+    color: #969397;
+    text-transform: uppercase;
+  }
+  .user{
+    background-color: #232f3e;
+    font-size: 19px;
+    color: #fff;
+    padding: 3% 12%;
+  }

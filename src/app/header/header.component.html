@@ -1,8 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
   <a class="navbar-brand navbar-toggle"  (click)="isCollapsed = !isCollapsed"
   [attr.aria-expanded]="!isCollapsed"><span class="navbar-toggler-icon"></span></a>
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
     <ul class="navbar-nav mr-auto">
+
       <li class="nav-item logo active">
         <a class="nav-link" routerLink="/main"><img src="https://pngimg.com/uploads/amazon/amazon_PNG9.png" class="logoImg" alt=""> <span class="sr-only">(current)</span></a>
       </li>
@@ -22,53 +26,48 @@
       </form>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+        <a class="nav-link dropdown-toggle" ngbDropdownToggle>
           EN
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLink="">Action</a>
-          <a class="dropdown-item" routerLink="">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="">Something else here</a>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <button ngbDropdownItem>Hindi</button>
+          <button ngbDropdownItem>English</button>
         </div>
+      </div>
       </li>
 
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+          <a class="nav-link dropdown-toggle" ngbDropdownToggle>
           Account
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLink="">Action</a>
-          <a class="dropdown-item" routerLink="">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="">Something else here</a>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <a class="dropdown-item" routerLink="">Create List</a>
+          <a class="dropdown-item" routerLink="">Your Account</a>
+        </div>
         </div>
       </li>
 
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       
+          <a class="nav-link">
           Orders
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLink="">Action</a>
-          <a class="dropdown-item" routerLink="">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="">Something else here</a>
-        </div>
+        
       </li>
 
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" routerLink="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+          <a class="nav-link dropdown-toggle" ngbDropdownToggle>
           Prime
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLink="">Action</a>
-          <a class="dropdown-item" routerLink="">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="">Something else here</a>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <a class="dropdown-item" routerLink="">Amazon Prime</a>
+        </div>
         </div>
       </li>
 
@@ -80,12 +79,60 @@
     </ul>
     
   </div>
+
 </nav>
 
-<div id="collapseExample" [ngbCollapse]="isCollapsed">
-  <div class="card">
-    <div class="card-body">
-      You can collapse this card by clicking Toggle
+
+
+<div id="collapseExample" [ngbCollapse]="isCollapsed" >
+
+  <div class="sidenav">
+    <div class="user">
+      <span> <i class="fa fa-user"></i> Hello. Sign in</span>
+    </div>
+    <div class="showScrollbar">
+     <ul class="ulPding">
+       <li>TOP CATEGORIES</li>
+       <hr>
+       <li><a href="#">Mobile Phones</a></li>
+       <li><a href="#">Baby</a></li>
+       <li><a href="#">Computer & Accessories</a></li>
+       <li><a href="#">Books</a></li>
+     </ul>
+
+     <ul class="ulPding">
+      <li>TOP CATEGORIES</li>
+      <hr>
+      <li><a href="#">Mobile Phones</a></li>
+      <li><a href="#">Baby</a></li>
+      <li><a href="#">Computer & Accessories</a></li>
+      <li><a href="#">Books</a></li>
+    </ul>
+
+    <ul class="ulPding">
+      <li>TOP CATEGORIES</li>
+      <hr>
+      <li><a href="#">Mobile Phones</a></li>
+      <li><a href="#">Baby</a></li>
+      <li><a href="#">Computer & Accessories</a></li>
+      <li><a href="#">Books</a></li>
+    </ul>
+
+    <ul class="ulPding">
+      <li>TOP CATEGORIES</li>
+      <hr>
+      <li><a href="#">Mobile Phones</a></li>
+      <li><a href="#">Baby</a></li>
+      <li><a href="#">Computer & Accessories</a></li>
+      <li><a href="#">Books</a></li>
+    </ul>
+    
+
+    </div>
+    <div class="closeModal">
+      <span (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">X</span>
     </div>
   </div>
+
+  
 </div>
