@@ -14,6 +14,8 @@ import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { CategoryComponent } from './category/category.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -26,7 +28,9 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
     MainComponent,
     HeaderComponent,
     FooterComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    CategoryComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
