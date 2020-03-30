@@ -1,6 +1,15 @@
 .card{
-    padding: 1%;
+    padding: 5%;
     margin: 1% 2%;
     border-radius: unset;
     text-align: center;
+}
+.productCategory > img{
+    width: 100%;
+}
+.pdingBtm{
+    padding-bottom: 3%;
+}
+.card>h4{
+    text-align: left;
 }
