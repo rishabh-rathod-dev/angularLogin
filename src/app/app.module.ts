@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
@@ -30,7 +31,8 @@ import { ProductComponent } from './product/product.component';
     FooterComponent,
     ShoppingListComponent,
     CategoryComponent,
-    ProductComponent
+    ProductComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
