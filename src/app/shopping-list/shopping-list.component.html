@@ -1,63 +1,26 @@
 <div class="jumbotron">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 mrgn card">
+        <div class="row" *ngIf="productList">
+            <div class="col-md-12 mrgn card" *ngFor="let product of productList">
                 <div class="row">
                     <div class="col-md-4"> 
                         <a href="#">
-                          <img src="https://m.media-amazon.com/images/I/612BZb3xpGL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+                          <img src="{{product.productImage}}" alt="{{product.name}}">
                         </a> 
                     </div>
                     <div class="col-md-8">
                         <a href="#">
-                            <a href="/product"> <h4>Product Name</h4></a>
+                            <a href="/product/{{product.id}}"> <h4>{{product.name}}</h4></a>
                         </a>
-                        <p><b> &#8377; 500</b></p>
-                        <p>Category</p>
-                        <p>Discription</p>
+                        <p><b> &#8377; {{product.price}}</b></p>
+                        <p><b>Category: &nbsp;</b>  {{product.category}}</p>
+                        <p><b>Sub-category: &nbsp;</b>  {{product.subCategory}}</p>
+                        <p><b>Description: &nbsp;</b>  {{product.description}}</p>
                     </div>
                 
                 </div>
             </div>
 
-            <div class="col-md-12 mrgn card">
-                <div class="row">
-                    <div class="col-md-4">  
-                        <a href="#">
-                            <img src="https://m.media-amazon.com/images/I/612BZb3xpGL._AC_UY327_FMwebp_QL65_.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-8">
-                        <a href="#">
-                            <a href="/product"> <h4>Product Name</h4></a>
-                        </a>
-                        <p><b> &#8377; 500</b></p>
-                        <p>Category</p>
-                        <p>Discription</p>
-                    </div>
-                
-                </div>
-            </div>
-
-
-            <div class="col-md-12 mrgn card">
-                <div class="row">
-                    <div class="col-md-4">  
-                        <a href="#">
-                            <img src="https://m.media-amazon.com/images/I/612BZb3xpGL._AC_UY327_FMwebp_QL65_.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-8">
-                        <a href="#">
-                            <a href="/product"> <h4>Product Name</h4></a>
-                        </a>
-                        <p><b> &#8377; 500</b></p>
-                        <p>Category</p>
-                        <p>Discription</p>
-                    </div>
-                
-                </div>
-            </div>
         </div>
     </div>
 

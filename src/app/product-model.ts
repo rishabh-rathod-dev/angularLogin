@@ -2,20 +2,23 @@
 export class Product { 
 
     id: number;
-    name: string;
-    
+    name: string;    
     category: string;
+    subCategory: string;
     price: number;
-    productImage: string;
-    quantity: string
+    quantity: string;
+    productImage: string;    
+    description: string
 
-    constructor(id, name, category, price, quantity, productImage) {
+    constructor(id, name, category, subCategory, price, quantity, productImage, description) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.category = category;
+        this.subCategory = subCategory;
         this.productImage = productImage;
-        this.quantity = quantity; 
+        this.quantity = quantity;
+        this.description = description; 
     }
 
 }
