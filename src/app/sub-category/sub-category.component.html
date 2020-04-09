@@ -1,0 +1,11 @@
+<div class="row" *ngIf="subCategoryList">
+    <div class="col-sm-6" *ngFor="let subCategory of subCategoryList">
+        
+        <div class="productCategory">
+            <img src="{{subCategory.subCategoryImage}}" alt="{{subCategory.subCategory}}">
+            <a href="{{category.category}}/{{subCategory.subCategory}}"><h6>{{subCategory.subCategory}}</h6></a>
+        </div>
+    </div>
+  
+</div>
+

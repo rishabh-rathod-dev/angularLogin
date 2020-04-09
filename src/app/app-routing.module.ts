@@ -14,8 +14,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'main', component: MainComponent },
-  { path: 'shoppingList', component: ShoppingListComponent },
-  { path: 'product', component: ProductComponent },
+  { path: 'shoppingList/:category/:subCategory', component: ShoppingListComponent },
+  { path: 'product/:id', component: ProductComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: '**', redirectTo:'login', pathMatch: 'full'}
 ];

@@ -17,6 +17,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { SubCategoryComponent } from './sub-category/sub-category.component';
 
 
 
@@ -33,6 +34,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     CategoryComponent,
     ProductComponent,
     CheckoutComponent,
+    SubCategoryComponent,
   ],
   imports: [
     BrowserModule,

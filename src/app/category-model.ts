@@ -1,11 +1,7 @@
 export class Category { 
-    category: string;
-    subCategory: string;
-    categoryImage: string;
+    category: string;   
 
-    constructor( category, subCategory, categoryImage) {
+    constructor( category) {
         this.category = category;
-        this.subCategory = subCategory;
-        this.categoryImage = categoryImage;
     }
 }
