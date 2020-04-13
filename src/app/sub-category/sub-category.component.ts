@@ -5,10 +5,13 @@ import { CategoryService } from '../category.service';
 import { Category } from '../category-model';
 
 @Component({
+  
   selector: 'app-sub-category',
   templateUrl: './sub-category.component.html',
   styleUrls: ['./sub-category.component.css']
+
 })
+
 export class SubCategoryComponent implements OnInit {
 
    subCategoryList: SubCategory[] = [];
