@@ -14,9 +14,13 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'main', component: MainComponent },
-  { path: 'shoppingList/:category/:subCategory', component: ShoppingListComponent },
-  { path: 'product/:id', component: ProductComponent },
-  { path: 'checkout', component: CheckoutComponent },
+  // { path: 'shoppingList/:category/:subCategory', component: ShoppingListComponent },
+  { path: 'shoppingList', children: [    
+    { path: ':category', component: ShoppingListComponent},
+    { path: ':category/:subCategory', component: ShoppingListComponent}
+  ]},
+  { path: 'product/:id', component: ProductComponent, pathMatch: 'full'},
+  { path: 'checkout', component: CheckoutComponent, pathMatch: 'full'},
   { path: '**', redirectTo:'login', pathMatch: 'full'}
 ];
 
@@ -27,5 +31,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-  paramMap: any;
+  url: any;
 }
